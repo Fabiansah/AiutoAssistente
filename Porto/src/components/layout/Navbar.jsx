@@ -126,8 +126,8 @@ export default function Navbar() {
               href="#beranda" 
               className="group flex items-center gap-1.5 text-slate-900 focus:outline-hidden"
             >
-              <span className="font-['Space_Grotesk',sans-serif] text-lg sm:text-xl font-bold tracking-tight leading-none text-slate-900 group-hover:opacity-90 transition-opacity">
-                Aiuto<span className="bg-linear-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Assistente</span>
+              <span className="font-['Space_Grotesk',sans-serif] text-lg sm:text-xl font-bold tracking-tight leading-none text-slate-900 group-hover:scale-[1.02] transition-transform">
+                Aiuto<span className="bg-linear-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent">Assistente</span>
               </span>
               <span className="relative flex h-2 w-2 mb-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -174,7 +174,6 @@ export default function Navbar() {
                 <div className="absolute inset-0 w-1/2 h-full bg-linear-to-r from-transparent via-white/30 to-transparent animate-beam pointer-events-none" />
                 <MessageCircle className="w-4 h-4 text-emerald-100" />
                 <span>Chat Konsultasi</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
 

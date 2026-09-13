@@ -370,50 +370,19 @@ export default function Hero() {
             <span className="block text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-800 tracking-tight pb-1">
               Tingkatkan Pertumbuhan Bisnis
             </span>
-            <span className="inline-block text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mt-1 sm:mt-2 bg-linear-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent pb-3 pt-1">
-              Lewat Website &amp; Otomasi Digital
-            </span>
+              <span className="inline-block text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mt-3 sm:mt-4 bg-linear-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent pb-3 pt-1">
+                Melalui Sistem Digital 
+              </span>
           </h1>
-
-          <p className="mt-4 text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+          
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max--2xl mx-auto font-normal">
             Rancang infrastruktur web berkecepatan tinggi yang terintegrasi langsung dengan WhatsApp untuk memaksimalkan konversi prospek bisnis Anda.
           </p>
         </div>
 
-        {/* CTA ACTION BUTTONS (FASE 3: STAGGER DELAY) */}
-        <div 
-          className={`mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center transition-all duration-800 cubic-bezier(0.16, 1, 0.3, 1) ${
-            introPhase >= 3 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-6'
-          }`}
-        >
-          <div className="relative w-full sm:w-auto group">
-            <Button 
-              variant="whatsapp" 
-              href={createWhatsAppUrl(waTemplates.generalInquiry())} 
-              isExternal
-              className="relative overflow-hidden w-full sm:w-auto py-4 px-8 text-base font-bold rounded-2xl shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/35 hover:-translate-y-0.5 active:scale-95 transition-all"
-            >
-              <div className="absolute inset-0 w-1/2 h-full bg-linear-to-r from-transparent via-white/30 to-transparent animate-beam pointer-events-none" />
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Mulai Konsultasi Gratis
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-
-          <Button 
-            variant="outline" 
-            href="#layanan"
-            className="w-full sm:w-auto py-4 px-8 text-base font-bold rounded-2xl bg-white border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 hover:text-slate-950 shadow-xs hover:-translate-y-0.5 active:scale-95 transition-all"
-          >
-            Lihat Solusi Layanan
-          </Button>
-        </div>
-
         {/* VALUE POINTS PILLS (FASE 3) */}
         <div 
-          className={`mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-600 transition-all duration-800 cubic-bezier(0.16, 1, 0.3, 1) ${
+          className={`mt-28 flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-xs sm:text-sm font-semibold text-slate-600 transition-all duration-800 cubic-bezier(0.16, 1, 0.3, 1) ${
             introPhase >= 3 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-4'
@@ -429,7 +398,7 @@ export default function Hero() {
 
         {/* TECH CONSOLE PANEL (FASE 4: KONSOL MEMBUKA SECARA ELEGAN) */}
         <div 
-          className={`relative mt-12 w-full max-w-3xl transition-all duration-1000 cubic-bezier(0.16, 1, 0.3, 1) ${
+          className={`relative mt-12 w-full max-w-5xl transition-all duration-1000 cubic-bezier(0.16, 1, 0.3, 1) ${
             introPhase >= 4 
               ? 'opacity-100 translate-y-0 scale-100' 
               : 'opacity-0 translate-y-10 scale-95'
@@ -530,17 +499,6 @@ export default function Hero() {
             )}
           </div>
         </div>
-
-        {/* SCROLL CUE (FASE 4) */}
-        <a 
-          href="#layanan" 
-          className={`mt-10 inline-flex flex-col items-center gap-1.5 text-slate-400 hover:text-emerald-600 transition-all duration-700 delay-500 ${
-            introPhase >= 4 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          <span className="text-[10px] font-bold uppercase tracking-widest">Eksplorasi Layanan</span>
-          <ChevronDown className="w-4 h-4 animate-bounce" />
-        </a>
 
       </div>
     </section>
