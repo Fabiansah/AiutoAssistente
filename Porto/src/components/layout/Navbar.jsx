@@ -127,11 +127,9 @@ export default function Navbar() {
               className="group flex items-center gap-1.5 text-slate-900 focus:outline-hidden"
             >
               <span className="font-['Space_Grotesk',sans-serif] text-lg sm:text-xl font-bold tracking-tight leading-none text-slate-900 group-hover:scale-[1.02] transition-transform">
-                Aiuto<span className="bg-linear-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent">Assistente</span>
+                Aiuto<span className="bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Assistente</span>
               </span>
               <span className="relative flex h-2 w-2 mb-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
             </a>
 

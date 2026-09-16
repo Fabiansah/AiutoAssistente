@@ -9,7 +9,7 @@ export default function Services() {
       id: 'landing-page',
       title: 'Landing Page',
       badge: null,
-      description: 'Solusi website kilat 2-3 halaman yang dirancang khusus untuk konversi penjualan, profil bisnis, atau promosi produk secara profesional.',
+      description: 'Solusi web kilat 2-3 halaman yang dirancang khusus untuk konversi penjualan, profil bisnis, atau promosi produk secara profesional.',
       features: [
         'Desain Modern & Responsif',
         'Struktur SEO Friendly',
@@ -56,15 +56,12 @@ export default function Services() {
   ];
 
   return (
-    <section id="layanan" className="py-28 bg-[#fafcfb] relative overflow-hidden">
+    <section id="layanan" className="pt-10 pb-30 bg-white relative overflow-hidden">
       {/* Background Ambient Glow Berjalan */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w[700px] h[700px] bg-linear-to-tr from-emerald-100/50 via-teal-100/30 to-cyan-100/40 rounded-full blur-[160px] pointer-events-none -z-10 animate-pulse" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
-          badge="Layanan Unggulan"
-          title="Solusi Terarah untuk Pertumbuhan Bisnis"
-          subtitle="Pilih paket pengembangan yang paling selaras dengan target digital usaha Anda saat ini."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-stretch pt-8">
@@ -80,13 +77,10 @@ export default function Services() {
                     : 'bg-white/90 backdrop-blur-2xl text-slate-900 border border-slate-200/80 hover:border-emerald-500/60 hover:shadow-2xl hover:shadow-emerald-950/10'
                 }`}
               >
-                {/* Efek Ambient Glow Dinamis di Belakang Kartu Saat Hover */}
-                <div className={`absolute -inset-1 rounded-3xl bg-linear-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 ${isFeatured ? 'opacity-75' : ''}`} />
 
                 {/* Badge Tag dengan Efek Berputar Halus */}
                 {isFeatured && (
-                  <div className="inline-flex items-center gap-1.5 self-start px-3.5 py-1 mb-6 text-xs font-bold text-slate-950 bg-emerald-400 rounded-full uppercase tracking-wider shadow-lg shadow-emerald-400/30 animate-bounce">
-                    <Sparkles className="w-3.5 h-3.5 text-slate-950" />
+                  <div className="inline-flex items-center gap-1.5 self-start px-3.5 py-1 mb-6 text-xs font-bold text-slate-950 bg-emerald-400 rounded-full uppercase tracking-wider shadow-emerald-400/30">
                     <span>{service.badge}</span>
                   </div>
                 )}
@@ -108,7 +102,7 @@ export default function Services() {
                     {service.features.map((feat, idx) => (
                       <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm group/item">
                         <div className={`p-1 rounded-full shrink-0 mt-0.5 transition-all duration-300 group-hover/item:scale-125 group-hover/item:rotate-12 ${
-                          isFeatured ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' : 'bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover/item:bg-emerald-600 group-hover/item:text-white'
+                          isFeatured ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/40' : 'bg-emerald-50 text-emerald-600 borde group-hover/item:bg-emerald-600 group-hover/item:text-white'
                         }`}>
                           <Check className="w-3 h-3" />
                         </div>
@@ -128,7 +122,7 @@ export default function Services() {
                   className={`relative overflow-hidden w-full justify-center py-3.5 rounded-2xl font-bold text-xs sm:text-sm transition-all duration-300 ${
                     isFeatured 
                       ? 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-600/30 hover:shadow-emerald-600/60 hover:scale-105 active:scale-95' 
-                      : 'bg-white border-slate-300 text-slate-700 hover:bg-emerald-600 hover:border-emerald-600 hover:text-white shadow-xs hover:shadow-lg hover:scale-105 active:scale-95'
+                      : 'bg-white border-slate-300 text-slate-700 hover:bg-emerald-600 hover:border-emerald-600 shadow-xs hover:shadow-lg hover:scale-105 active:scale-95'
                   }`}
                 >
                   {/* Efek Kilau Cahaya Berjalan di Tombol */}

@@ -6,7 +6,6 @@ import TechStack from './components/common/TechStack';
 import Services from './sections/Services';
 import Process from './sections/Process';
 import Portfolio from './sections/Portfolio';
-import Testimonials from './sections/Testimonials';
 import FAQ from './sections/FAQ';
 import Contact from './sections/Contact';
 
@@ -20,7 +19,6 @@ export default function App() {
         <Services />
         <Process />
         <Portfolio />
-        <Testimonials />
         <FAQ />
         <Contact />
       </main>

@@ -1,26 +1,18 @@
 export const portfolioData = [
   {
     id: 1,
-    title: "Landing Page Bisnis F&B",
-    category: "Web Development",
-    description: "Website promosi menu dan pemesanan otomatis via pesan instan.",
-    image: "https://placehold.co/600x400/1e293b/ffffff?text=Landing+Page+Project",
-    demoUrl: "#"
-  },
-  {
-    id: 2,
-    title: "Sistem Manajemen Inventaris",
+    title: "Sistem Manajemen Laundry & Kasir Digital",
     category: "Web App",
-    description: "Aplikasi internal untuk pencatatan stok dan pelaporan otomatis.",
-    image: "https://placehold.co/600x400/1e293b/ffffff?text=Web+App+Project",
-    demoUrl: "#"
+    description: "Aplikasi web manajemen laundry end-to-end yang dirancang untuk mengelola pencatatan transaksi, status pengerjaan pakaian secara real-time, laporan keuangan harian, serta manajemen pelanggan.",
+    
+    // Array 3 foto bergiliran untuk slider mockup browser
+    images: [
+      "/images/871.png", // Foto halaman utama / dashboard kasir
+      "/images/872.png", // Foto halaman transaksi / detail pesanan
+      "/images/873.png"  // Foto halaman laporan keuangan / manajemen data
+    ],
+
+    techStack: ["Laravel", "Tailwind CSS", "MySQL"],
+    liveUrl: "#"
   },
-  {
-    id: 3,
-    title: "Bot Otomasi Layanan Pelanggan",
-    category: "Automation",
-    description: "Integrasi API bot untuk menjawab FAQ klien selama 24 jam.",
-    image: "https://placehold.co/600x400/1e293b/ffffff?text=Bot+Automation",
-    demoUrl: "#"
-  }
 ];

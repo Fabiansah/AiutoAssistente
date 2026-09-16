@@ -1,65 +1,92 @@
 import { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
-import SectionTitle from '../components/common/SectionTitle';
+import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState(0);
 
   const faqs = [
     {
-      q: "Berapa lama proses pembuatan landing page atau website?",
-      a: "Untuk landing page standar biasanya memakan waktu antara 3 hingga 7 hari kerja tergantung kelengkapan materi seperti foto dan teks dari Anda."
+      q: "Berapa lama proses pembuatan landing page atau sistem web?",
+      a: "Untuk landing page standar biasanya memakan waktu antara 3 hingga 7 hari kerja. Sedangkan untuk Web App atau sistem kustom skala menengah disesuaikan dengan kompleksitas fitur dan kesiapan materi dari Anda."
     },
     {
-      q: "Apakah nanti bisa dibantu integrasikan langsung dengan nomor WhatsApp saya?",
-      a: "Tentu saja. Semua tombol Call-to-Action dan formulir konsultasi akan langsung kami rancang agar otomatis membuka pesan chat WhatsApp dengan format teks yang rapi."
+      q: "Apakah nanti bisa dibantu integrasikan langsung dengan WhatsApp?",
+      a: "Tentu saja. Semua tombol Call-to-Action (CTA), formulir kontak, dan pemesanan layanan akan langsung kami rancang agar otomatis membuka pesan chat WhatsApp dengan format teks yang rapi dan terstruktur."
     },
     {
-      q: "Apakah websitenya sudah bisa dibuka lancar lewat HP / smartphone?",
-      a: "Pasti! Kami memprioritaskan prinsip Mobile-First Responsive, sehingga tampilan otomatis menyesuaikan layar smartphone, tablet, maupun laptop dengan kecepatan loading tinggi."
+      q: "Apakah aplikasi web dan mobile sudah responsif di semua perangkat?",
+      a: "Pasti! Kami menerapkan standar arsitektur Mobile-First Responsive, sehingga tata letak dan performa tetap optimal dan mulus diakses lewat smartphone, tablet, maupun desktop."
     },
     {
-      q: "Apakah ada biaya bulanan atau tahunan?",
-      a: "Biaya pembuatan sistem di awal adalah satu kali bayar. Anda hanya perlu memperpanjang sewa domain (.com/.id) dan server/hosting setiap tahun sesuai paket yang Anda pilih."
+      q: "Bagaimana sistem garansi dan pemeliharaan (maintenance) setelah rilis?",
+      a: "Setiap proyek dilengkapi garansi perbaikan bug dan pemeliharaan sistem. Untuk keberlanjutan jangka panjang, kami juga menyediakan opsi dukungan teknis berkala serta bantuan pengelolaan server/hosting."
     }
   ];
 
   return (
-    <section id="faq" className="py-24 bg-slate-50/70 border-t border-slate-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle
-          badge="Pertanyaan Umum"
-          title="Hal yang Sering Ditanyakan"
-          subtitle="Jawaban ringkas seputar proses kerja sama, durasi pengerjaan, dan spesifikasi teknis website."
-        />
+    <section id="faq" className="pt-10 pb-30 bg-white relative overflow-hidden">
+      
+      {/* Background Ambient Glow Halus */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -[700px] h[700px] bg-linear-to-tr from-emerald-100/40 via-teal-50/20 to-transparent rounded-full blur-[160px] pointer-events-none -z-10" />
 
-        <div className="space-y-4 mt-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* HEADER SECTION YANG LEBIH MENARIK & PROFESIONAL */}
+        <div className="text-center max-w-2xl mx-auto mb-15">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs font-bold tracking-wide text-emerald-900 bg-emerald-50 border border-emerald-200/80 rounded-full shadow-xs">
+            <span>FAQ & INFORMASI</span>
+          </div>
+        </div>
+
+        {/* LIST ACCORDION FAQ */}
+        <div className="space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-xs transition-all"
+                className={`rounded-3xl border transition-all duration-500 ease-out overflow-hidden ${
+                  isOpen 
+                    ? 'bg-slate-900 text-white scale-[1.01]' 
+                    : 'bg-[#fafcfb] text-slate-900 border-slate-200/90 hover:border-emerald-300 hover:bg-white hover:shadow-lg hover:shadow-emerald-950/5'
+                }`}
               >
                 <button
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-slate-900 hover:text-emerald-600 transition-colors"
+                  className="w-full px-10 py-6 text-left flex items-center justify-between gap-4 font-bold transition-colors cursor-pointer"
                 >
-                  <span className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-emerald-500 shrink-0" />
-                    {faq.q}
+                  <span className="flex items-center gap-3.5 text-base sm:text-lg">
+                    <div className={`w-9 h-9 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      isOpen ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20' : 'bg-emerald-50 text-emerald-600 border border-emerald-100'
+                    }`}>
+                      <HelpCircle className="w-4 h-4" />
+                    </div>
+                    <span className={`transition-colors duration-300 ${isOpen ? 'text-white' : 'text-slate-900'}`}>
+                      {faq.q}
+                    </span>
                   </span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${
-                      isOpen ? 'transform rotate-180 text-emerald-600' : ''
-                    }`}
-                  />
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                    {faq.a}
+
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-500 ease-out ${
+                    isOpen ? 'bg-slate-800 text-emerald-400 rotate-180' : 'bg-slate-100 text-slate-500'
+                  }`}>
+                    <ChevronDown className="w-4 h-4" />
                   </div>
-                )}
+                </button>
+
+                {/* Smooth Accordion Expansion */}
+                <div 
+                  className={`grid transition-all duration-500 ease-out ${
+                    isOpen ? 'grid-rows-[1fr] opacity-100 pb-7' : 'grid-rows-[0fr] opacity-0 pb-0'
+                  }`}
+                >
+                  <div className="overflow-hidden px-7">
+                    <div className="pt-2 text-sm sm:text-base text-slate-300 leading-relaxed border-t border-slate-800/80">
+                      <p className="pl-12 pt-3">
+                        {faq.a}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             );
           })}
